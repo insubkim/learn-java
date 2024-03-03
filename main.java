@@ -1,14 +1,18 @@
 import java.util.Scanner;
-
 public class main {
+
+    public static boolean is_leap_year(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int score = s.nextInt();
-
-        if (score >= 90) System.out.println("A");
-        else if (score >= 80) System.out.println("B");
-        else if (score >= 70) System.out.println("C");
-        else if (score >= 60) System.out.println("D");
-        else System.out.println("F");
+        String line = s.nextLine();
+        try {
+            int year = Integer.parseInt((line));
+            if (is_leap_year(year)) System.out.println("윤년!");
+            else System.out.println("평년!");
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
     }
  }
