@@ -6,13 +6,13 @@ public class main {
     }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        String line = s.nextLine();
-        try {
-            int year = Integer.parseInt((line));
-            if (is_leap_year(year)) System.out.println("윤년!");
-            else System.out.println("평년!");
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
+        int a = s.nextInt();
+        int b = s.nextInt();
+
+        System.out.println(a + b);
+        System.out.println(a - b);
+        System.out.println(a * b);
+        System.out.println(a / b);
+        System.out.println(a % b);
     }
  }
